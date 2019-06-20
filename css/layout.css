@@ -257,6 +257,10 @@ ul#nav li.current a { color: #F06000; }
 #resume h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
 }
+#resume h3:hover {
+    color: #11ABB0;
+}
+
 
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
@@ -280,6 +284,7 @@ ul#nav li.current a { color: #F06000; }
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
+#resume .title:hover { color: #0F9095; }
 
 /*----------------------------------------------*/
 /*	Skill Bars
@@ -323,6 +328,10 @@ ul#nav li.current a { color: #F06000; }
   	height: 42px;
    line-height: 42px;
    border-radius: 3px 0 0 3px;
+}
+
+.bar-expand:hover {
+    background: #0F9095;
 }
 
 .photoshop {
