@@ -286,6 +286,53 @@ ul#nav li.current a { color: #F06000; }
 }
 #resume .title:hover { color: #0F9095; }
 
+/* Timeline styling for multiple roles in same company */
+.timeline-roles {
+   margin-bottom: 24px;
+}
+
+.timeline-role {
+   position: relative;
+   margin-bottom: 0;
+   padding-bottom: 16px; /* Reduced to bring roles comfortably closer together */
+}
+
+.timeline-role:last-child {
+   padding-bottom: 0;
+}
+
+/* The circular dot */
+.timeline-role::before {
+   content: '';
+   position: absolute;
+   left: -24px;  /* Set center uniformly to -24px, placing it in the left gutter */
+   transform: translateX(-50%);
+   box-sizing: border-box;
+   top: 6px;
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   background: #fff;
+   border: 2px solid #11ABB0;
+   z-index: 2;
+}
+
+/* The vertical connecting line */
+.timeline-role:not(:last-child)::after {
+   content: '';
+   position: absolute;
+   left: -24px; /* Centers line exactly at -24px seamlessly with the dot */
+   transform: translateX(-50%);
+   top: 24px;    /* 6px(top) + 14px(height) = 20px bottom. Set to 24px for a comfortable 4px gap. */
+   bottom: -7px; /* Accounts for a 5px collapsing top-margin on text, precisely anchoring the bar 4px above the next circle. */
+   width: 2px;
+   background: #11ABB0;
+   z-index: 1;
+}
+
+
+
+
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
